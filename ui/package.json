@@ -1,0 +1,20 @@
+{
+  "name": "ngui",
+  "version": "1.0.0",
+  "description": "Angular UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chandan Somani",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/cli": "^16.2.5"
+  },
+  "keywords": [
+    "Angular",
+    "UI",
+    "for",
+    "IOTDashboardApp"
+  ]
+}
