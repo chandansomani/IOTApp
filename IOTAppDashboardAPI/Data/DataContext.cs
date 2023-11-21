@@ -36,7 +36,7 @@ namespace IOTAppDashboardAPI.Data
                 
                 List<AppUser> users = new List<AppUser>()
                 {
-                    new AppUser() {UserName = "Admin", PasswordHash = Utilities.HashPass("admin"), UserType="Admin",    DeviceId=rd.Next(10000,99999) },
+                    new AppUser() {UserName = "Admin", PasswordHash = Utilities.HashPass("admin"), UserType="Admin",     DeviceId = rd.Next(10000, 99999) },
                     new AppUser() {UserName = "User1", PasswordHash = Utilities.HashPass("user1"), UserType = "AppUser", DeviceId = rd.Next(10000, 99999) },
                     new AppUser() {UserName = "User2", PasswordHash = Utilities.HashPass("user2"), UserType = "AppUser", DeviceId = rd.Next(10000, 99999) },
                     new AppUser() {UserName = "User3", PasswordHash = Utilities.HashPass("user3"), UserType = "AppUser", DeviceId = rd.Next(10000, 99999) },
