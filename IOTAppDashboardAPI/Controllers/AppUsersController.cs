@@ -120,7 +120,7 @@ namespace IOTAppDashboardAPI.Controllers
         [HttpGet("ManualSeedData")]
         public  void AppUserManualSeedData()
         {
-            _context.ManualSeedData();        
+            _context.ManualSeedData("AppUser");        
             _context.SaveChanges();
         }
     }

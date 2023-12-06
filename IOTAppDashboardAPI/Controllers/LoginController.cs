@@ -32,6 +32,11 @@ namespace IOTAppDashboardAPI.Controllers
         [HttpPost] // /api/LoginAppUser
         public async Task<ActionResult<String>> LoginAppUser(LoginDto appUser)
         {
+            // PTR
+            // Parameter binding takes json object 
+            // if request-content is passed as a form-data api doesnt work
+            // API takes only json object as a input
+
             //AppUser User = await _context.AppUser.FindAsync(appUser.UserName);
             AppUser User = await _context.AppUser
                 .Where(x => x.UserName == appUser.UserName)
@@ -54,7 +59,7 @@ namespace IOTAppDashboardAPI.Controllers
                     if (User.PasswordHash[i] != passhash[i]) return Unauthorized("Invalid Password.");
                 }
 
-                return Ok(new { token = _tokenService.CreateToken(User)});
+                return Ok(new { token = _tokenService.CreateToken(User) });
             }
         }
     }

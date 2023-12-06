@@ -7,8 +7,11 @@ namespace IOTAppDashboardAPI.Extensions
 {
     public static class ApplicationServicesExtensions
     {
+
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
             // Add services to the container.
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(config.GetConnectionString("DataContext") ??
@@ -48,7 +51,19 @@ namespace IOTAppDashboardAPI.Extensions
                 });
             });
 
-            services.AddCors();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://localhost:4200",
+                                                          "https://localhost:4200",
+                                                          "http://localhost:5173")
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader();
+                                  });
+            });
             services.AddScoped<ITokenService, TokenService>();
 
             return services; 
