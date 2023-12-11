@@ -28,6 +28,20 @@ namespace IOTAppDashboardAPI.Controllers
             return await _context.Devices.ToListAsync();
         }
 
+        [HttpGet("GetAllDevices/{Info}")]
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesInfo(string Info)
+        {
+            switch (Info)
+            {
+                case "Id":
+                    //return await _context.Devices.Select(id => id.Id).ToListAsync();                    
+                    return await _context.Devices.ToListAsync();                    
+
+                default: 
+                    return await _context.Devices.ToListAsync();
+            }
+        }
+
         // GET: api/Devices/5           // Get Single
         [HttpGet("{id}")]
         public async Task<ActionResult<Device>> GetDevice(int id)

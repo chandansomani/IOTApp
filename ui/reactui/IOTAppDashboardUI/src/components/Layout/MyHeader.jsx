@@ -1,10 +1,10 @@
-import Login from "./LoginForm";
+import LoginForm from "./LoginForm";
 
 function MyHeader() {
   return (
     <header>
-      <h2>Dashboard</h2>
-      <Login />
+      <h1>Dashboard</h1>
+      <LoginForm />
     </header>
   );
 }

@@ -1,13 +1,12 @@
+import ListofDevices from "../Device/ListofDevices";
 import "./App.css";
+
 function App() {
-  return (
+    // TODO :  Display the Respective component in App [ ListofDevices, Recordings, User Management]
+
+    return (
     <>
-      <hr />
-      <article>
-        <p className="read-the-docs">This a App Component</p>
-        <article>Lorem ipsum dolor sit amet. </article>
-      </article>
-      <hr />
+      <ListofDevices />
     </>
   );
 }

@@ -2,7 +2,6 @@
 function MyNav() {
   return (
     <nav>
-      <ul>
         <li>
           <a href="#">Devices</a>
         </li>
@@ -12,7 +11,6 @@ function MyNav() {
         <li>
           <a href="#">Login</a>
         </li>
-      </ul>
     </nav>
   );
 }

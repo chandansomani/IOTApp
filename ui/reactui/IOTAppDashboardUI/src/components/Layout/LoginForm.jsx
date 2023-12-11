@@ -28,7 +28,7 @@ function Login() {
       <form onSubmit={onSubmit}>
         <input id="UserName" type="text" name="UserName" />
         <input id="password" type="password" name="Password" />
-        <input type="submit" name="Submit" />
+        <input type="submit" name="Submit" value=">" />
       </form>
     </>
   );

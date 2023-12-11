@@ -7,16 +7,10 @@ import MyHeader from "./MyHeader";
 function Layout() {
   return (
     <>
-      <div>
+      <div className="container">
         <MyHeader />
-        <section>
           <MyNav />
-          <article>
-            <App />
-            <App />
-            <App />
-          </article>
-        </section>
+          <App />
         <MyFooter />
       </div>
     </>

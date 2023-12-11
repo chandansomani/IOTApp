@@ -1,64 +1,135 @@
-* {
-    box-sizing: border-box;
-}
 
-
-/* Style the header */
-header {
-    background-color: #666;
-    /* padding: 30px; */
-    text-align: center;
-    /* font-size: 35px; */
-    color: white;
-}
-
-form{
-    display: inline-block;
-    background-color: #f1f1f1;
-}
-
-/* Container for flexboxes */
-section {
-    display: -webkit-flex;
-    display: flex;
-}
-
-/* Style the navigation menu */
-nav {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    background: #ccc;
-    padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Style the content */
-article {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-    background-color: #f1f1f1;
-    padding: 10px;
-}
-
-/* Style the footer */
-footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+/* Responsive layout - makes the menu and the content (inside the section)
+   sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
     section {
         -webkit-flex-direction: column;
         flex-direction: column;
     }
+}
+
+/* A margin and padding are provided 0
+box-sizing border box is used to include
+padding and border in the total width
+and height of the element, and font-family
+can be specified by the user */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+}
+
+/* The user display allows you to specify the
+background colour and height. The
+display:flex property, which is aligned at the
+centre, is used to fill available free space
+or to shrink them to prevent overflow. */
+body {
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* font-weight Specifies weight of glyphs
+in the font, their degree of blackness or
+stroke */
+
+h1{
+    font-size: 1.4em;
+}
+
+h2,
+h3 {
+    text-align: left;
+}
+
+h1 {
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+div {
+    /* width: 480px; */
+    background-color: #fff;
+    margin: 12px 0;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 2px 2px 8px 2px #aaa;
+}
+
+/* The font-weight, font-size, background-color,
+and border can all be customized by the user.
+The border-radius property allows you to give
+an element rounded corners.*/
+input[type=text],
+input[type=number],
+input[type=password] {
+    font-size: 12px;
+    padding: 8px 0;
+    font-weight: 900;
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.myclass1 {
+    font-size: 22px;
+    padding: 8px 0;
+    font-weight: 900;
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+
+.container {
+    max-width: 80vw;
+    min-height: 95vh;
+    margin: auto;
+    background-color: dodgerblue;
+    border-radius: 1vw;
+}
+
+button,
+.mybutton {
+    border: 10;
+    min-width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.maincontent {
+    display: grid;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.maincontent>.a {
+    grid-column-start: 1;
+    background-color: blueviolet;
+    max-width: 250;
+}
+
+.maincontent>.b {
+    grid-column-start: 2;
+    background-color: darksalmon;
+    max-width: 100;
+}
+
+.maincontent>.content {
+    grid-column-start: 3;
+    background-color: aqua;
+    max-width: 750;
+}
+
+li {
+    list-style: square;
 }
