@@ -1,16 +1,21 @@
 
-function MyNav() {
+function MyNav(props) {
+
+  //console.log("MyNav Props :" + props.delegateActionFunctions);
+
   return (
     <nav>
-        <li>
-          <a href="#">Devices</a>
-        </li>
-        <li>
-          <a href="#">Recordings</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
+      <li>
+        <a onClick={() => props.delegateActionFunctions("Devices")}>Devices</a>
+      </li>
+      <li>
+        <a onClick={() => props.delegateActionFunctions("LiveReading")}>
+          Live Readings
+        </a>
+      </li>
+      <li>
+        <a onClick={() => props.delegateActionFunctions("Login")}>Login</a>
+      </li>
     </nav>
   );
 }

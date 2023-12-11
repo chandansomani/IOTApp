@@ -2,6 +2,7 @@
 using IOTAppDashboardAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Diagnostics;
 
 namespace IOTAppDashboardAPI.Extensions
 {
@@ -51,6 +52,8 @@ namespace IOTAppDashboardAPI.Extensions
                 });
             });
 
+
+            Debug.Write(config.GetSection("AllowedHost"));
 
             services.AddCors(options =>
             {
