@@ -1,23 +1,16 @@
+import { Views } from "./data";
 
 function MyNav(props) {
-
   //console.log("MyNav Props :" + props.delegateActionFunctions);
 
-  return (
-    <nav>
-      <li>
-        <a onClick={() => props.delegateActionFunctions("Devices")}>Devices</a>
+  let content = Views.map((item, index) => {
+    return (
+      <li key={index}>
+        <a onClick={() => props.delegateActionFunctions(item)}>{item}</a>
       </li>
-      <li>
-        <a onClick={() => props.delegateActionFunctions("LiveReading")}>
-          Live Readings
-        </a>
-      </li>
-      <li>
-        <a onClick={() => props.delegateActionFunctions("Login")}>Login</a>
-      </li>
-    </nav>
-  );
+    );
+  });
+  return <nav>{content}</nav>;
 }
 
-export default MyNav
+export default MyNav;

@@ -23,16 +23,13 @@ function ListofDevices() {
 
   return (
     <>
-      <button onClick={() => getDevicesList()}>Show All Devices</button>
-      <button>Add New Device</button>
-      <button>Manage Devices</button>
-
+      <button onClick={() => getDevicesList()}>Refresh</button>
       <div className="cardcontainer">
         {ListofDevices.map((device, index) => (
           <Device key={index} {...device} />
         ))}
       </div>
-      <button onClick={() => addRandomDevices()}>Bulk Add Random Device</button>
+
     </>
   );
 }

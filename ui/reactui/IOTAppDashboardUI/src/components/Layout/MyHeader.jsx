@@ -1,10 +1,12 @@
 import LoginForm from "./LoginForm";
+import Logo from "./Logo";
 
 function MyHeader() {
   return (
     <header>
-      <h1>Dashboard</h1>
-      <LoginForm />
+      <Logo />
+      <h4>IOT Devices Dashboard</h4>
+      {/* <LoginForm /> */}
     </header>
   );
 }

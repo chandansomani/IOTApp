@@ -93,7 +93,7 @@ namespace IOTAppDashboardAPI.Controllers
             _context.AppUser.Add(appUser);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetAppUser", new { id = appUser.Id }, appUser);
+            return CreatedAtAction("PostAppUser", new { id = appUser.Id }, appUser);
         }
 
         // DELETE: api/AppUsers/5

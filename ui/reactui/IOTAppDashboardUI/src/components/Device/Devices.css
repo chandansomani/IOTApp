@@ -26,18 +26,21 @@
 
 .card>div:nth-child(2) {
     background-color: chocolate;
-    min-width: 100px;
-    margin: 5px;
 }
 
 .card>div:nth-child(1) {
+    min-width: 100px;
     background-color: #888;
     padding: 2px;
     margin: 1px;
     border-radius: 2px;
 }
 
-.card>div:nth-child()
+.card>div{
+    padding: 2.5px;
+    width: 80px;
+    margin: 8px auto;
+}
 
 
 

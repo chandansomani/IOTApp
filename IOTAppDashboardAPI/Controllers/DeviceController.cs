@@ -62,10 +62,11 @@ namespace IOTAppDashboardAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<AppUser>> PostDevice(Device device)
         {
+            
             _context.Devices.Add(device);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("Devices", new { id = device.Id }, device);
+            return CreatedAtAction("PostDevice", new { id = device.Id }, device);
         }
 
         // DELETE: api/Devices/5        // Delete

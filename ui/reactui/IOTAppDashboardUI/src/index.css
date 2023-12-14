@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+
 .container {
   max-width: 80vw;
   min-height: 90vh;
@@ -13,8 +15,28 @@
   font-family: 'Trebuchet MS';
 }
 
-body {
+/* body {
   background-color: #f7f7f7;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#180d27, #0c0219);
+  /* color: #e5d9f1; */
+  min-height: 100vh;
+}
+
+#root {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 30rem;
+  text-align: center;
+  border-radius: 6px;
+  background: linear-gradient(#341a89, #3a1967);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -36,7 +58,7 @@ nav li {
   display: inline;
   width: max-content;
   margin: 5px auto;
-  padding: 15px;
+  padding: 0px;
   line-height: 45px;
 }
 
@@ -46,6 +68,7 @@ nav li a {
   padding: .75rem 5rem 0.75rem 5rem;
   border-radius: .5rem;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 
@@ -71,33 +94,13 @@ nav {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
+#logo {
+  /* height: 6em; */
+  /* padding: 1.5em; */
   will-change: filter;
   transition: filter 300ms;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#logo:hover {
+  filter: drop-shadow(0 0 2em #000000);
 }

@@ -4,21 +4,19 @@ import MyFooter from "./MyFooter";
 import MyNav from "./MyNav";
 import MyHeader from "./MyHeader";
 import { useState } from "react";
-
-const Views = ["Devices", "LiveReading", "Login"]
+import { Views } from "./data";
 
 function Layout() {
-
-  const [currentView, setCurrentView] = useState(Views[0]);
+  const [currentView, setCurrentView] = useState(Views[3]);  // default View
 
   //console.log(currentView);
 
   return (
     <>
       <div className="container">
-        <MyHeader />
-          <MyNav delegateActionFunctions={setCurrentView}/>
-          <App layout={currentView} />
+          <MyHeader />
+        <MyNav delegateActionFunctions={setCurrentView} />
+        <App layout={currentView} />
         <MyFooter />
       </div>
     </>
